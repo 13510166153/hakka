@@ -1,0 +1,7 @@
+
+
+    /**
+      *#fieldDesc#
+     **/
+    @ApiModelProperty(value="#fieldDesc#")
+    private #fieldType# #fieldName#;

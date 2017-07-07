@@ -1,0 +1,14 @@
+package #packageName#;
+
+import com.ashan.hakka.common.util.PojoUtils;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+
+/**
+ *自动生成的DTO代码,对应表[#tableName#]的DTO对象,主要是用来做为查询的输入条件.
+ *@author CreateCodeUtils
+ *@date #currentDate#
+ */
+ @ApiModel(value="#dboName#")
+public class #dboName#QueryDTO implements com.ashan.hakka.common.pojo.dto.DTO

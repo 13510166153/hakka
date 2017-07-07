@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ashan.hakka.ucenter.dao.mapper.TuEPermMapper">
+
+    <select id="listTuEPermsByAppId" parameterType="java.lang.Long" resultType="com.ashan.hakka.ucenter.dbo.TuEPermDO">
+        <![CDATA[
+            SELECT id id,
+                prem_code premCode,
+                prem_desc premDesc,
+                app_id appId,
+                is_delete isDelete,
+                gmt_create gmtCreate,
+                gmt_modified gmtModified
+            FROM hakka.tu_e_perm where app_id=#{id} and is_delete=0
+         ]]>
+    </select>
+
+</mapper>

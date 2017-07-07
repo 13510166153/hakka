@@ -1,0 +1,11 @@
+package #packageName#;
+
+import com.ashan.hakka.common.util.PojoUtils;
+
+
+/**
+ *自动生成的DO代码,对应表[#tableName#]的DO对象.
+ *@author CreateCodeUtils
+ *@date #currentDate#
+ */
+public class #dboName#DO implements com.ashan.hakka.common.pojo.dbo.DBO

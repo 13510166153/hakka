@@ -1,0 +1,120 @@
+package #packageName#;
+
+import java.util.List;
+
+import com.ashan.hakka.ucenter.dbo.#dboName#DO;
+import com.ashan.hakka.ucenter.dto.#dboName#PaginationQueryDTO;
+import com.ashan.hakka.ucenter.dto.#dboName#QueryDTO;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+/**
+ * @author CreateCodeUtils
+ * @date #currentDate#
+ */
+@Mapper
+public interface #dboName#Mapper {
+
+    /**
+     * 根据ID获取DO对象.
+     *
+     * @param id
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public #dboName#DO get#dboName#ById(Long id);
+
+    /**
+     * 根据ID获取多个DO对象.
+     *
+     * @param id
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public List<#dboName#DO> list#dboName#sByIds(List<Long> ids);
+
+    /**
+     * 查询DO对象,不分页.
+     * @param queryDTO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public List<#dboName#DO> list#dboName#s(#dboName#QueryDTO queryDTO);
+
+    /**
+     * 查询DO记录数.
+     * @param queryDTO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int count#dboName#sByQuery(#dboName#QueryDTO queryDTO);
+
+    /**
+     * 查询DO记录数.主要是分页查询时使用
+     * @param paginationQueryDTO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int count#dboName#sByPaginationQuery(#dboName#PaginationQueryDTO paginationQueryDTO);
+
+
+    /**
+     * 查询DO对象,主要是分页查询时使用.
+     * @param paginationQueryDTO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public List<#dboName#DO> list#dboName#sByPaginationQuery(#dboName#PaginationQueryDTO paginationQueryDTO);
+
+    /**
+     * 根据ID更新.
+     * @param #dboName#DO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int update#dboName#ById(#dboName#DO #dboName#DO);
+
+    /**
+     * 根据查询条件更新.
+     * @param #dboName#DO
+     * @param queryDTO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int update#dboName#ByQuery(@Param("dbo") #dboName#DO #dboName#DO,@Param("query")  #dboName#QueryDTO queryDTO);
+
+    /**
+     * 根据ID删除.
+     * @param id
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int delete#dboName#ById(Long id);
+
+    /**
+     * 根据查询条件删除
+     * @param queryDTO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int delete#dboName#ByQuery(#dboName#QueryDTO queryDTO);
+
+    /**
+     * 插入一条记录.
+     * @param #dboName#DO
+     * @return
+     * @author CreateCodeUtils
+     * @date #currentDate#
+     */
+    public int insert#dboName#(#dboName#DO #dboName#DO);
+}

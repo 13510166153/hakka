@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ashan.hakka.ucenter.dao.mapper.TuEAppMapper">
+
+
+    <select id="getTuEAppDOById" parameterType="java.lang.Long" resultType="com.ashan.hakka.ucenter.dbo.TuEAppDO">
+        <![CDATA[
+        SELECT id id,
+            app_code appCode,
+            app_name appName,
+            app_img appImg,
+            app_desc appDesc,
+            app_url appUrl,
+            access_key accessKey,
+            is_delete isDelete,
+            gmt_create gmtCreate,
+            gmt_modified gmtModified
+            FROM tu_e_app where id=#{id} and is_delete=0
+         ]]>
+    </select>
+
+
+</mapper>

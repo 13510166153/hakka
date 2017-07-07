@@ -1,0 +1,6 @@
+
+
+    /**
+      *#fieldDesc#
+     **/
+    private #fieldType# #fieldName#;

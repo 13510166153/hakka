@@ -1,0 +1,7 @@
+
+
+    @Override
+    public String toString()
+    {
+        return com.ashan.hakka.common.util.PojoUtils.toString(this);
+    }

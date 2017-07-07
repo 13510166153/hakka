@@ -1,0 +1,12 @@
+
+
+    public #fieldType# #getName#()
+    {
+        return this.#fieldName#;
+    }
+
+
+    public void #setName#(#fieldType# #fieldName#)
+    {
+        this.#fieldName#=#fieldName#;
+    }
